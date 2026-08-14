@@ -135,6 +135,8 @@ if [[ "$TEST_ROOT" ]]; then
         --preserve-env=PODMAN_TEST_DEBUG \
         --preserve-env=CONTAINERS_HELPER_BINARY_DIR \
         --preserve-env=PODMAN_ROOTLESS_USER \
+        --preserve-env=PODMAN_BATS_LEAK_CHECK \
+        --preserve-env=REMOTESYSTEM_TRANSPORT \
         bats "${bats_opts[@]}" "${bats_filter[@]}" "${TESTS[@]}"
     rc=$?
 fi
